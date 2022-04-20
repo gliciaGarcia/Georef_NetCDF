@@ -10,11 +10,11 @@
 from osgeo import gdal
 
 #Abrindo o arquivo de entrada
-filename = r"D:\Doutorado_INPE2020\Tese\analise_cluster\verao\teste.nc"
+filename = r"D:\Doutorado_INPE2020\Tese\analise_cluster\verao\K2_ERA5_janeiro.nc"
 input_raster = gdal.Open(filename)
 
 #Criando o arquivo de saida
-output_raster = r"D:\Doutorado_INPE2020\Tese\analise_cluster\verao\teste2.tif"
+output_raster = r"D:\Doutorado_INPE2020\Tese\analise_cluster\verao\K2_ERA5_janeiro.tif"
 
 ##Transformando as coordenadas em dstSRS='EPSG:4326'
 warp = gdal.Warp(output_raster,input_raster,format = "GTiff")
